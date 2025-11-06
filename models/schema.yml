@@ -1,0 +1,47 @@
+#schema.yml
+version: 2
+
+sources:
+  - name: raw
+    schema: gz_raw_data
+    tables:
+      - name: products
+        identifier: raw_gz_product
+        description: all products
+        columns:
+          - name: products_id
+            description: primary key
+            tests:
+              - unique
+              - not_null
+          - name: purchSE_PRICE
+            description: price of the product
+            tests:
+              - not_null
+
+      - name: sales
+        identifier: raw_gz_sales
+        description: sales date for gw company
+        columns:
+          - name: date_date
+            description: date of the order
+            tests:
+              - not_null
+          - name: orders_id
+            description: primary key
+            tests:
+              - unique
+              - not_null
+          - name: pdt_id
+            description: products id
+            tests:
+              - unique
+              - not_null
+          - name: revenue 
+            tests:
+              - not_null
+          - name: quantity
+            tests:
+              - not_null
+              
+              
