@@ -43,5 +43,29 @@ sources:
           - name: quantity
             tests:
               - not_null
+          
+      - name: ships
+        identifier: raw_gz_ship
+        description: shipment info about orders
+        columns:
+          - name: orders_id
+            tests: 
+              - unique
+              - not_null
+          - name: shipping_fee
+            tests:
+              - not_null
+          - name: shipping_fee_1
+            tests:
+              - not_null
+          - name: logCost
+            tests:
+              - not_null
+          - name: ship_cost
+            tests:
+              - not_null
+
               
+
+
               
