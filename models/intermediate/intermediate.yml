@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: sales_margin
+    description: adds purchase costs and margin to sales
+    columns:
+      - name: purchase_cost
+        tests:
+        - not_null
+      - name: margin
+        description: margin = revenue - product_price*quantiy
+        tests: 
+        - not_null
+
+        
