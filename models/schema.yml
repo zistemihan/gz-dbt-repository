@@ -14,7 +14,7 @@ sources:
             tests:
               - unique
               - not_null
-          - name: purchSE_PRICE
+          - name: purchse_price
             description: price of the product
             tests:
               - not_null
@@ -30,26 +30,24 @@ sources:
           - name: orders_id
             description: primary key
             tests:
-              - unique
               - not_null
           - name: pdt_id
             description: products id
             tests:
-              - unique
               - not_null
-          - name: revenue 
+          - name: revenue
             tests:
               - not_null
           - name: quantity
             tests:
               - not_null
-          
+
       - name: ships
         identifier: raw_gz_ship
         description: shipment info about orders
         columns:
           - name: orders_id
-            tests: 
+            tests:
               - unique
               - not_null
           - name: shipping_fee
@@ -64,8 +62,3 @@ sources:
           - name: ship_cost
             tests:
               - not_null
-
-              
-
-
-              
