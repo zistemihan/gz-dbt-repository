@@ -62,3 +62,134 @@ sources:
           - name: ship_cost
             tests:
               - not_null
+
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: adwords raw data
+        columns:
+          - name: date_date
+            tests:
+              - not_null
+          - name: paid_source
+            tests:
+              - not_null
+          - name: campaign_key
+            tests:
+              - not_null
+          - name: camPGN_name
+            tests:
+              - not_null
+          - name: ads_cost
+            tests:
+              - not_null
+          - name: impression
+            tests:
+              - not_null
+          - name: click
+            tests:
+              - not_null
+              
+      - name: bing
+        identifier: raw_gz_bing
+        description: bing raw data
+        columns:
+          - name: date_date
+            tests:
+              - not_null
+          - name: paid_source
+            tests:
+              - not_null
+          - name: campaign_key
+            tests:
+              - not_null
+          - name: camPGN_name
+            tests:
+              - not_null
+          - name: ads_cost
+            tests:
+              - not_null
+          - name: impression
+            tests:
+              - not_null
+          - name: click
+            tests:
+              - not_null
+
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: criteo raw data
+        columns:
+          - name: date_date
+            tests:
+              - not_null
+          - name: paid_source
+            tests:
+              - not_null
+          - name: campaign_key
+            tests:
+              - not_null
+          - name: camPGN_name
+            tests:
+              - not_null
+          - name: ads_cost
+            tests:
+              - not_null
+          - name: impression
+            tests:
+              - not_null
+          - name: click
+            tests:
+              - not_null
+
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: facebook raw data
+        columns:
+          - name: date_date
+            tests:
+              - not_null
+          - name: paid_source
+            tests:
+              - not_null
+          - name: campaign_key
+            tests:
+              - not_null
+          - name: camPGN_name
+            tests:
+              - not_null
+          - name: ads_cost
+            tests:
+              - not_null
+          - name: impression
+            tests:
+              - not_null
+          - name: click
+            tests:
+              - not_null
+
+models:
+
+  - name: int_campaigns
+    description: whole data from all campaigns
+    columns:
+      - name: date_date
+        tests:
+        - not_null
+      - name: paid_source
+        tests:
+        - not_null
+      - name: campaign_key
+        tests:
+        - not_null
+      - name: campaign_name
+        tests:
+        - not_null
+      - name: ads_cost
+        tests:
+        - not_null
+      - name: impression
+        tests:
+        - not_null
+      - name: click
+        tests:
+        - not_null  
